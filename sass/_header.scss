@@ -7,15 +7,12 @@ header {
   justify-content: space-between;
   align-items: flex-end;
   padding: 2rem 0;
-  a {
-    text-decoration: none;
-    color: $primary-text;
-  }
   .logo {
     font-size: clamp(1.5rem, 0.6074rem + 3.9669vw, 3rem);
     color: $bright-accent;
     a {
       color: $bright-accent;
+      text-decoration: none;
     }
   }
   .logo-line-two {
@@ -69,6 +66,13 @@ header {
       border-right: none;
     }
   }
+  .nav-item-link {
+    text-decoration: none;
+    color: $primary-text;
+  }
+  .active {
+    color: $accent;
+  }
 }
 
 .burger-menu {
@@ -105,4 +109,8 @@ header {
   .burger-move .bottom-line {
     transform: rotate(45deg) translate(-4px, -5px);
   }
+}
+
+header a .active {
+  color: red;
 }

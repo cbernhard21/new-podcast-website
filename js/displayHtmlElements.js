@@ -11,4 +11,22 @@ export async function getHeaderHtml(navSlideFunc) {
   const headerHtml = await response.text();
   document.querySelector('#header-wrapper').innerHTML = headerHtml;
   navSlideFunc();
+
+  const path = window.location.pathname;
+
+  const navItems = document.querySelectorAll('.nav-item-link');
+  navItems.forEach(item => {
+
+    if (path === '/index.html' && item.innerText === 'Home') {
+      item.classList.add('active');
+    } else if (path === '/episodes.html' && item.innerText === 'Episodes') {
+      item.classList.add('active');
+    } else if (path === '/about.html' && item.innerText === 'About Us') {
+      item.classList.add('active');
+    } else if (path === '/contact.html' && item.innerText === 'Contact Us') {
+      item.classList.add('active');
+    }
+  })
+
+
 }
