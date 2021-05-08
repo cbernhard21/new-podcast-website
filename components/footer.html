@@ -4,10 +4,14 @@
     <div class="footer-subscribe">
       <h2 id="subscribe">Subscribe</h2>
       <p>Get email updates when new episodes are released</p>
-      <form action="#" aria-labelledby="subscribe">
+      <form action="https://formsubmit.co/0615e76a1ceb7792294949a3aa40fbed " method="POST" aria-labelledby="subscribe">
         <label for="email">Enter Email</label>
-        <input type="text" id="email">
+        <input type="email" id="email" name="email" placeholder="Email Address" required>
+        <input type="hidden" name="_subject" value="New Listener!">
+        <input type="hidden" name="_autoresponse" value="Thank You for subscribing.  We will contact you when a new episode is released">
+        <input type="hidden" name="_next" value="https://cbernhard21.github.io/new-podcast-website/thanks.html">
         <button type="submit" class="btn" id="subscribe-button-footer">Submit</button>
+
       </form>
     </div>
 
