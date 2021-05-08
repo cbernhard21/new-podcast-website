@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: $black;
+  color: $primary-text;
+  font-weight: $light;
+}
+
+h1 {
+  font-weight: $bold;
+  line-height: 1.1;
+}
+
+a {
+  color: $accent;
+}
+
+a:hover {
+  color: $bright-accent;
+}
+
+button {
+  background-color: $black;
+}

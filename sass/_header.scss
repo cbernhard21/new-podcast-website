@@ -1,0 +1,108 @@
+header {
+  position: relative;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1600px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2rem 0;
+  a {
+    text-decoration: none;
+    color: $primary-text;
+  }
+  .logo {
+    font-size: clamp(1.5rem, 0.6074rem + 3.9669vw, 3rem);
+    color: $bright-accent;
+    a {
+      color: $bright-accent;
+    }
+  }
+  .logo-line-two {
+    display: block;
+    font-weight: $regular;
+    font-size: 1.5rem;
+  }
+}
+
+.main-nav {
+  height: 100%;
+  @include medium-device {
+    background-color: $black;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    transform: translateX(100%);
+    transition: transform .5s ease-out;
+  }
+  .nav-list {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    font-size: 1.2rem;
+    @include large-device {
+      font-size: .8rem;
+    }
+    @include medium-device {
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      height: 100%;
+      font-size: 1rem;
+    }
+  }
+  .nav-item {
+    border-right: 1px solid $primary-text;
+    padding: 0 .75rem;
+    &:last-child {
+      border-right: none;
+    }
+    @include large-device {
+      padding: 0 .5rem;
+    }
+    @include medium-device {
+      border-right: none;
+    }
+  }
+}
+
+.burger-menu {
+  width: 40px;
+  background-color: $black;
+  border: 1px solid $bright-accent;
+  display: none;
+  z-index: 3;
+  cursor: pointer;
+  @include medium-device {
+    display: block;
+    z-index: 1101;
+    cursor: pointer;
+  }
+}
+
+.burger-bar {
+  width: 25px;
+  height: 2px;
+  background-color: $bright-accent;
+  margin: 5px auto;
+}
+
+@include medium-device {
+  .slide {
+    transform: translateX(0);
+  }
+  .burger-move .top-line {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  .burger-move .middle-line {
+    opacity: 0;
+  }
+  .burger-move .bottom-line {
+    transform: rotate(45deg) translate(-4px, -5px);
+  }
+}

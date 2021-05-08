@@ -1,0 +1,185 @@
+#hero-wrapper {
+  height: 75vh;
+  background: linear-gradient(107.46deg, #0B0C10 31.15%, rgba(11, 12, 16, 0.1) 98.83%), url(../images/microphone-background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero {
+  height: 100%;
+  padding: 2rem 0;
+  .hero-content {
+    height: 100%;
+    h2 {
+      line-height: 1.1;
+      // font-weight: $regular;
+      font-weight: $light;
+      margin-bottom: 4rem;
+    }
+    .slogan {
+      font-size: clamp(1.5rem, -0.5826rem + 9.2562vw, 5rem);
+    }
+    .slogan-line-two {
+      display: block;
+      font-size: clamp(1rem, -0.1901rem + 5.2893vw, 3rem);
+      margin: .5rem 0;
+    }
+    h3 {
+      font-size: clamp(1rem, 0.2860rem + 3.1736vw, 2.2rem);
+    }
+    ul {
+      font-size: clamp(1rem, 0.5835rem + 1.8512vw, 1.7rem);
+      transform: translateX(2rem);
+      margin-bottom: 2rem;
+    }
+    .hero-link-group {
+      a {
+        text-decoration: none;
+        margin-right: 2rem;
+        @include medium-device {
+          margin-right: 0;
+          margin-bottom: 2rem;
+          width: fit-content;
+        }
+      }
+      @include medium-device {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+#current-episodes {
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(10px, 1fr));
+  gap: 50px;
+  @include medium-device {
+    grid-template-columns: minmax(10px, 1fr);
+  }
+  h2 {
+    font-weight: $regular;
+    font-size: clamp(1.5rem, 0.6880rem + 3.6090vw, 3rem);
+    margin-bottom: 1.5rem;
+  }
+}
+
+.current {
+  iframe {
+    margin-bottom: 2rem;
+  }
+}
+
+.how-to-listen {
+  .podcast-logo-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    a {
+      text-decoration: none;
+      display: inline-block;
+      &:nth-child(even) {
+        margin: 0 auto;
+      }
+    }
+    i {
+      font-size: 5rem;
+    }
+    svg,
+    i {
+      color: rgba(197, 198, 199, .5);
+      max-width: 5rem;
+      width: 100%;
+      transition: color .2s ease-in-out;
+      &:hover {
+        color: $primary-text;
+      }
+    }
+    .pocket {
+      max-width: 16rem;
+    }
+  }
+}
+
+#about {
+  padding: 4rem 0;
+  display: grid;
+  grid-template-columns: max-content minmax(10px, 1fr);
+  @include medium-device {
+    grid-template-columns: minmax(10px, 1fr);
+  }
+}
+
+.about-content {
+  margin-left: 2rem;
+  h2 {
+    font-size: clamp(1.5rem, 0.6880rem + 3.6090vw, 3rem);
+    line-height: 1;
+    margin-bottom: 2rem;
+  }
+  p {
+    max-width: 50ch;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    @include small-device {
+      font-size: 1rem;
+    }
+  }
+  @include medium-device {
+    order: 1;
+  }
+  @include small-device {
+    .btn {
+      font-size: 1rem;
+    }
+  }
+}
+
+.about-logo {
+  max-width: 400px;
+  img {
+    object-fit: cover;
+    width: 100%;
+  }
+  @include large-device {
+    display: none;
+  }
+}
+
+.reviews {
+  padding: 6rem 0;
+  h2 {
+    font-size: clamp(1.5rem, 0.6880rem + 3.6090vw, 3rem);
+    margin-bottom: 2rem;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    @include medium-device {
+      flex-direction: column;
+    }
+  }
+  .review {
+    flex: 1 100%;
+    align-self: flex-start;
+    background-color: $black;
+    border-radius: 10px;
+    padding: 2rem 1.2rem;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin: 0 1rem;
+    &:first-child {
+      margin-left: 0;
+    }
+    p {
+      margin-bottom: 2rem;
+    }
+    @include medium-device {
+      margin: 0 0 2rem 0;
+    }
+  }
+}

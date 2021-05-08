@@ -1,0 +1,90 @@
+footer {
+  background-color: $black;
+  h2 {
+    font-weight: $regular;
+    color: $accent;
+    font-size: 2rem;
+  }
+  a {
+    color: $primary-text;
+  }
+  .footer-content {
+    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(10px, 1fr));
+    grid-gap: 10px;
+    @include medium-device {
+      grid-template-columns: minmax(10px, 1fr);
+    }
+    .footer-subscribe {
+      p {
+        margin-bottom: 1rem;
+      }
+      input {
+        display: block;
+        margin-bottom: 1rem;
+        width: 75%;
+      }
+      button {
+        width: 75%;
+        &:hover {
+          background-color: $bright-accent;
+          color: $black;
+        }
+      }
+      @include medium-device {
+        input,
+        button {
+          width: 100%;
+        }
+        margin-bottom: 2rem;
+      }
+    }
+    .footer-connect {
+      justify-self: stretch;
+      text-align: center;
+      @include medium-device {
+        text-align: left;
+        margin-bottom: 2rem;
+      }
+      ul {
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin: 0 auto;
+        @include medium-device {
+          margin: 0;
+          width: 50%;
+        }
+      }
+      a {
+        font-size: 2.5rem;
+        &:hover {
+          color: $accent;
+        }
+      }
+    }
+    .footer-site-map {
+      justify-self: end;
+      @include medium-device {
+        justify-self: start;
+      }
+      ul {
+        transform: translateX(1.5rem);
+        li {
+          margin-bottom: .5rem;
+        }
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+  .copyright {
+    background-color: $dark-bg;
+    padding: .75rem 0;
+    text-align: center;
+    font-size: .75rem;
+  }
+}
