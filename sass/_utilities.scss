@@ -37,6 +37,9 @@
     background-color: $bright-accent;
     color: $black;
   }
+  @include small-device {
+    font-size: 1rem;
+  }
 }
 
 .btn-solid {

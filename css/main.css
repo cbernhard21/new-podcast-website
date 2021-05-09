@@ -69,6 +69,11 @@ button {
   background-color: #66FCF1;
   color: #0b0c10;
 }
+@media (max-width: 480px) {
+  .btn {
+    font-size: 1rem;
+  }
+}
 
 .btn-solid {
   background-color: #66FCF1;
@@ -280,7 +285,6 @@ header a .active {
     margin-right: 0;
     margin-bottom: 2rem;
     width: fit-content;
-    font-size: 1rem;
   }
 }
 @media (max-width: 768px) {
@@ -351,9 +355,19 @@ header a .active {
     grid-template-columns: minmax(10px, 1fr);
   }
 }
+@media (max-width: 480px) {
+  #about {
+    padding: 2.5rem 0;
+  }
+}
 
 .about-content {
   margin-left: 2rem;
+}
+@media (max-width: 480px) {
+  .about-content {
+    margin-left: 0;
+  }
 }
 .about-content h2 {
   font-size: clamp(1.5rem, 0.6880rem + 3.6090vw, 3rem);
@@ -397,6 +411,11 @@ header a .active {
 .reviews {
   padding: 6rem 0;
 }
+@media (max-width: 480px) {
+  .reviews {
+    padding: 3rem 0;
+  }
+}
 .reviews h2 {
   font-size: clamp(1.5rem, 0.6880rem + 3.6090vw, 3rem);
   margin-bottom: 2rem;
@@ -421,6 +440,7 @@ header a .active {
   font-size: 1.4rem;
   line-height: 1.4;
   margin: 0 1rem;
+  font-weight: 400;
 }
 .reviews .review:first-child {
   margin-left: 0;
@@ -432,6 +452,10 @@ header a .active {
   .reviews .review {
     margin: 0 0 2rem 0;
   }
+}
+.reviews .review-name {
+  font-weight: 300;
+  font-style: italic;
 }
 
 footer {
