@@ -19,15 +19,13 @@ export async function getHeaderHtml(navSlideFunc) {
     console.log(item)
     console.log(path);
 
-    if (path === '/index.html' && item.innerText === 'Home') {
+    if ((path === '/index.html' || path === '/') && item.innerText === 'Home') {
       item.classList.add('active');
     } else if (path === '/episodes.html' && item.innerText === 'Episodes') {
       item.classList.add('active');
     } else if (path === '/about.html' && item.innerText === 'About Us') {
       item.classList.add('active');
     } else if (path === '/contact.html' && item.innerText === 'Contact Us') {
-      item.classList.add('active');
-    } else if (path === '/' && item.innerText === 'Home') {
       item.classList.add('active');
     }
   })
