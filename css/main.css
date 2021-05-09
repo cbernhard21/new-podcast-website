@@ -245,6 +245,11 @@ header a .active {
   font-weight: 300;
   margin-bottom: 4rem;
 }
+@media (max-width: 480px) {
+  .hero .hero-content h2 {
+    margin-bottom: 1.5rem;
+  }
+}
 .hero .hero-content .slogan {
   font-size: clamp(1.5rem, -0.5826rem + 9.2562vw, 5rem);
 }
@@ -261,6 +266,11 @@ header a .active {
   transform: translateX(2rem);
   margin-bottom: 2rem;
 }
+@media (max-width: 480px) {
+  .hero .hero-content ul {
+    margin-bottom: 1rem;
+  }
+}
 .hero .hero-content .hero-link-group a {
   text-decoration: none;
   margin-right: 2rem;
@@ -270,6 +280,7 @@ header a .active {
     margin-right: 0;
     margin-bottom: 2rem;
     width: fit-content;
+    font-size: 1rem;
   }
 }
 @media (max-width: 768px) {

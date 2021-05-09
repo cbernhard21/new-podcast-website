@@ -16,6 +16,9 @@
       // font-weight: $regular;
       font-weight: $light;
       margin-bottom: 4rem;
+      @include small-device {
+        margin-bottom: 1.5rem;
+      }
     }
     .slogan {
       font-size: clamp(1.5rem, -0.5826rem + 9.2562vw, 5rem);
@@ -32,6 +35,9 @@
       font-size: clamp(1rem, 0.5835rem + 1.8512vw, 1.7rem);
       transform: translateX(2rem);
       margin-bottom: 2rem;
+      @include small-device {
+        margin-bottom: 1rem;
+      }
     }
     .hero-link-group {
       a {
@@ -41,6 +47,7 @@
           margin-right: 0;
           margin-bottom: 2rem;
           width: fit-content;
+          font-size: 1rem;
         }
       }
       @include medium-device {

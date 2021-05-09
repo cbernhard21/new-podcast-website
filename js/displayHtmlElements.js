@@ -16,9 +16,6 @@ export async function getHeaderHtml(navSlideFunc) {
 
   const navItems = document.querySelectorAll('.nav-item-link');
   navItems.forEach(item => {
-    console.log(item)
-    console.log(path);
-
     if ((path === '/index.html' || path === '/') && item.innerText === 'Home') {
       item.classList.add('active');
     } else if (path === '/episodes.html' && item.innerText === 'Episodes') {
@@ -29,6 +26,4 @@ export async function getHeaderHtml(navSlideFunc) {
       item.classList.add('active');
     }
   })
-
-
 }
