@@ -27,6 +27,8 @@ export async function getHeaderHtml(navSlideFunc) {
       item.classList.add('active');
     } else if (path === '/contact.html' && item.innerText === 'Contact Us') {
       item.classList.add('active');
+    } else if (path === '' && item.innerText === 'Home') {
+      item.classList.add('.active');
     }
   })
 
