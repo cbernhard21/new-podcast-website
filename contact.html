@@ -20,8 +20,47 @@
 
   <div id="header-wrapper"></div>
 
-  <main>
-    <h1>Contact Us</h1>
+  <main class="contact-page">
+    <!-- <div class="section-wrapper-black"> -->
+    <section id="contact" aria-label="Contact Us">
+      <div class="page-title-group container">
+        <h1 class="page-title">Contact Us</h1>
+        <hr class="faded-line">
+      </div>
+
+      <div class="section-wrapper-grey">
+        <div class="container">
+          <form class="form" action="https://formsubmit.co/0615e76a1ceb7792294949a3aa40fbed" method="POST">
+
+            <!-- these are the settings for formsubmit.io -->
+            <input type="hidden" name="_subject" value="Listener Comments!">
+            <input type="hidden" name="_autoresponse" value="Thank You for listening.  We appreciate all feed back.">
+            <input type="hidden" name="_next" value="https://wooo-podcast.netlify.app/thanks.html">
+
+            <!-- start contact form here -->
+            <div class="form-group">
+              <label class="contact-label" for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Name">
+            </div>
+            <div class="form-group">
+              <label class="contact-label" for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="form-group">
+              <label class="contact-label" for="comments">Comments:</label>
+              <textarea name="comments" id="comments" placeholder="Message"></textarea>
+            </div>
+            <div class="form-group-checkbox">
+              <input type="checkbox" id="yes-email" name="yes-email" value="Yes I want email updates">
+              <label for="yes-email" class="contact-label">Yes, I would like to receive email updates </label>
+            </div>
+            <button type="submit" class="btn btn-contact">Submit</button>
+
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- </div> -->
 
 
   </main>
