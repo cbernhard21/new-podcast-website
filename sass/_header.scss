@@ -69,6 +69,9 @@ header {
   .nav-item-link {
     text-decoration: none;
     color: $primary-text;
+    &:hover {
+      color: $bright-accent;
+    }
   }
   .active {
     color: $accent;

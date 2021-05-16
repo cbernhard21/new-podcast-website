@@ -1,0 +1,51 @@
+.contact-page {
+  .section-wrapper-grey {
+    padding: 2rem 0;
+  }
+  h1 {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.form {
+  background-color: $black;
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  input[type=text],
+  input[type=email] {
+    background-color: $dark-bg;
+  }
+  input[type=email]:focus,
+  input[type=email]:visited {
+    background-color: $accent;
+  }
+}
+
+.form-group,
+.form-group-checkbox {
+  margin-bottom: 3rem;
+}
+
+.contact-label {
+  color: $accent;
+  font-size: 1.5rem;
+}
+
+.btn-contact {
+  display: block;
+  width: 100%;
+}
+
+#comments {
+  background-color: $dark-bg;
+  height: 300px;
+  font-family: 'Poppins', sans-serif;
+}

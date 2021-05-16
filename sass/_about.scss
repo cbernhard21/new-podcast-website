@@ -1,0 +1,123 @@
+.about {
+  .faded-line {
+    background: linear-gradient(270.02deg, rgba(70, 162, 158, 0) 0.02%, #46A29E 37.01%, #46A29E 61.8%, rgba(70, 162, 158, 0) 101.17%);
+    width: clamp(18rem, -0.7500rem + 83.3333vw, 50rem);
+    margin: 0 auto;
+    height: 5px;
+    transform: translateY(-15px);
+    @include medium-device {
+      transform: translateY(-10px);
+    }
+    @include small-device {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.about-host {
+  padding: 5rem 0;
+  display: flex;
+  @include medium-device {
+    flex-direction: column;
+  }
+  img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    grid-area: image;
+  }
+  .chris {
+    padding-left: 3rem;
+    @include medium-device {
+      padding-left: 0;
+      order: -1;
+      margin-bottom: 2rem;
+    }
+  }
+  .scott {
+    padding-right: 3rem;
+    @include medium-device {
+      padding-right: 0;
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+  @include medium-device {
+    width: 100%;
+  }
+}
+
+.about-host-name {
+  font-size: clamp(1.5rem, 0.0197rem + 6.5789vw, 4rem);
+  font-weight: $regular;
+}
+
+.about-host-title {
+  font-size: clamp(1rem, 0.5263rem + 2.1053vw, 1.8rem);
+  font-weight: $regular;
+  font-style: $font-italic;
+}
+
+.about-host-list-title {
+  font-size: 2rem;
+  font-weight: $regular;
+  color: $accent;
+}
+
+.about-host-text,
+.about-host-list {
+  font-size: 1.2rem;
+}
+
+.about-host-text {
+  margin-bottom: 2rem;
+}
+
+.about-host-list {
+  transform: translateX(25px);
+}
+
+.about-listen {
+  text-align: center;
+  padding: 3rem 0;
+  h2 {
+    font-size: clamp(1.5rem, 0.0197rem + 6.5789vw, 4rem);
+    font-weight: $regular;
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: clamp(1.5rem, 0.6118rem + 3.9474vw, 3rem);
+    font-weight: $regular;
+  }
+  a {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 4rem;
+  }
+  .podcast-logo-group {
+    // border: 2px solid green;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    a {
+      color: rgba(197, 198, 199, .5);
+      text-decoration: none;
+      font-size: 6rem;
+      margin: 0;
+      &:hover {
+        color: rgba(197, 198, 199, 1);
+      }
+    }
+    @include medium-device {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
