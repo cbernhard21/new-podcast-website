@@ -1,0 +1,84 @@
+#episodes {
+  position: relative;
+  h1 {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.page-title-group {
+  padding: 3rem 0 7rem 0;
+  @include large-device {
+    padding: 2rem 0 6rem 0;
+  }
+  @include small-device {
+    padding: 1rem 0 3rem 0;
+  }
+}
+
+.episode-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  @include small-device {
+    grid-template-columns: minmax(10px, 1fr);
+  }
+}
+
+.episode-card {
+  border-radius: 10px;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  background-color: rgba(255, 255, 255, .1);
+  overflow: hidden;
+  transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+  cursor: pointer;
+  figure {
+    width: 300px;
+    @include medium-device {
+      display: none;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, .2);
+    transform: scale(1.05);
+  }
+}
+
+.episode-card-content {
+  padding: 1rem;
+}
+
+.episode-card-title {
+  font-size: clamp(1.4rem, 0.9500rem + 2.0000vw, 2rem);
+  font-weight: $regular;
+  margin-bottom: .75rem;
+  a {
+    text-decoration: none;
+  }
+}
+
+.episode-card-season {
+  font-size: clamp(1.1rem, 0.8000rem + 1.3333vw, 1.5rem);
+  font-weight: $light;
+}
+
+.episode-card-release {
+  font-style: $font-italic;
+  margin-bottom: 1rem;
+}
+
+.episode-card-summary {
+  font-size: 1rem;
+}
+
+.listen-link {
+  margin-top: .5rem;
+  display: inline-block;
+  font-size: 1.3rem;
+}

@@ -47,7 +47,6 @@
           margin-right: 0;
           margin-bottom: 2rem;
           width: fit-content;
-          font-size: 1rem;
         }
       }
       @include medium-device {
@@ -117,10 +116,16 @@
   @include medium-device {
     grid-template-columns: minmax(10px, 1fr);
   }
+  @include small-device {
+    padding: 2.5rem 0;
+  }
 }
 
 .about-content {
   margin-left: 2rem;
+  @include small-device {
+    margin-left: 0;
+  }
   h2 {
     font-size: clamp(1.5rem, 0.6880rem + 3.6090vw, 3rem);
     line-height: 1;
@@ -157,6 +162,9 @@
 
 .reviews {
   padding: 6rem 0;
+  @include small-device {
+    padding: 3rem 0;
+  }
   h2 {
     font-size: clamp(1.5rem, 0.6880rem + 3.6090vw, 3rem);
     margin-bottom: 2rem;
@@ -179,6 +187,7 @@
     font-size: 1.4rem;
     line-height: 1.4;
     margin: 0 1rem;
+    font-weight: $regular;
     &:first-child {
       margin-left: 0;
     }
@@ -188,5 +197,9 @@
     @include medium-device {
       margin: 0 0 2rem 0;
     }
+  }
+  .review-name {
+    font-weight: $light;
+    font-style: italic;
   }
 }
