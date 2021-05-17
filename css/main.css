@@ -34,11 +34,6 @@ h6 {
   line-height: 1.1;
 }
 
-h1 {
-  font-weight: 700;
-  line-height: 1.1;
-}
-
 a {
   color: #46a29e;
 }
@@ -817,10 +812,6 @@ footer .copyright {
 .form-group input[type=text],
 .form-group input[type=email] {
   background-color: #202833;
-}
-.form-group input[type=email]:focus,
-.form-group input[type=email]:visited {
-  background-color: #46a29e;
 }
 
 .form-group,
