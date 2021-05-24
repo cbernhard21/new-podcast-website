@@ -493,7 +493,8 @@ header a .active {
 .reviews .review:first-child {
   margin-left: 0;
 }
-.reviews .review p {
+.reviews .review p,
+.reviews .review h3 {
   margin-bottom: 2rem;
 }
 @media (max-width: 768px) {
