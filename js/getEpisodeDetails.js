@@ -1,36 +1,65 @@
 'use strict'
 
-export async function getEpisodeDetails() {
-  const response = await fetch('./db/db.json');
-  const data = await response.json();
+export async function getEpisodeDetails(season) {
+    const response = await fetch('./db/db.json');
+    const data = await response.json();
+    let seasonEpisodes = [];
+    let seasonTitle = '';
+    const episodeContainer = document.querySelector('#episode-container');
 
-  let seasonOneEpisodes = data.season1.episodes;
-  // let seasonTwoEpisodes = data.season2.episodes;
+    if (season === 'Season 1') {
+        seasonEpisodes = data.season1.episodes;
+        seasonTitle = data.season1.seasonTitle;
+        episodeHtml();
+    }
+    if (season === 'Season 2') {
+        seasonEpisodes = data.season2.episodes;
+        seasonTitle = data.season2.seasonTitle;
+        comingSoon();
+    }
 
-  let episodeCardHtml = '';
-  const episodeContainer = document.querySelector('#episode-container');
+    function episodeHtml() {
+        let episodeCardHtml = '';
 
-  let seasonOneEpisodesHtml = seasonOneEpisodes.map(episode => {
-    let episodeNumber = episode.number.slice(2);
-    episodeCardHtml = `<article class="episode-card">
-          
-                        <div class="episode-card-content">
-                          <h2 class="episode-card-title"><a href="episode-${episode.number}.html">${episode.title}</a></h2>
-                          <h3 class="episode-card-season">Season 1 - Ep. ${episodeNumber}</h3>
-                          <p class="episode-card-release">Released - ${episode.releaseDate}</p>
+        let seasonEpisodesHtml = seasonEpisodes.map(episode => {
+            let episodeNumber = episode.number.slice(2);
+            episodeCardHtml = `<article class="episode-card">
+            
+                          <div class="episode-card-content">
+                            <h2 class="episode-card-title"><a href="episode-${episode.number}.html">${episode.title}</a></h2>
+                            <h3 class="episode-card-season">Season ${episode.season} - Ep. ${episodeNumber}</h3>
+                            <p class="episode-card-release">Released - ${episode.releaseDate}</p>
+  
+                            <p class="episode-card-summary">
+                              ${episode.summary}
+                            </p>
+                            <a class="listen-link"href="episode-${episode.number}.html">Listen</a>
+                            
+                          </div>
+  
+                         </article>`
 
-                          <p class="episode-card-summary">
-                            ${episode.summary}
-                          </p>
-                          <a class="listen-link"href="episode-${episode.number}.html">Listen</a>
-                          
-                        </div>
+            return episodeCardHtml;
+        }).join('');
 
-                       </article>`
+        const seasonHeading = `<div class="episode-heading-container">
+                                  <h2 class="episode-season-heading">${season}</h2>
+                                  <h3 class="episode-season-title">${seasonTitle}</h3>
+                              </div>`;
 
-    return episodeCardHtml;
-  }).join('')
 
-  episodeContainer.innerHTML = seasonOneEpisodesHtml;
+        episodeContainer.innerHTML = seasonHeading + seasonEpisodesHtml;
+    }
+
+    function comingSoon() {
+        const seasonHeading = `<div class="episode-heading-container">
+                                <h2 class="episode-season-heading">${season}</h2>
+                                <h3 class="episode-season-title">${seasonTitle}</h3>
+                              </div>`;
+        const seasonEpisodesHtml = `<p class="big">Coming Soon!</p>`
+
+        episodeContainer.innerHTML = seasonHeading + seasonEpisodesHtml;
+    }
+
 
 }
