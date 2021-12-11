@@ -187,29 +187,17 @@
         "season": "Season 2",
         "seasonTitle": "Timelines",
         "episodes": [{
-            "title": "Test",
+            "title": "The 1994 MLB Strike",
             "season": "2",
             "number": "201",
-            "releaseDate": "Test",
-            "logo": "./images/show-logos/episode-9.jpg",
+            "releaseDate": "December 10, 2021",
+            "logo": "./images/logo.png",
 
-            "webPlayer": "<iframe class='player' title='Episode 9' src='https://player.simplecast.com/7ece1943-648c-4564-8d16-30cd16cff281?dark=true'></iframe>",
+            "webPlayer": "</iframe><iframe class='player' title='Episode 10' src='https://player.simplecast.com/6d8cdda1-7c65-473d-b4c5-a206d3dfd9a0?dark=true'></iframe>",
 
-            "summary": "This is a test for season 2",
+            "summary": "Chris and Scott are back in season 2 of We're Out Of Order: Timelines.  We take a look at possible alternate history outcomes.  This episode is about the 1994 MLB strike.",
             "timeStamps": [
-                "0:20 - Welcome",
-                "2:48 - The guys catch up on what is happening with them",
-                "3:00 - Talks about his Baseball & Softball adventures. Has he been kicked out of a game yet?",
-                "5:30 - Chris is trying to finish up another master's class. It's taking forever!",
-                "6:15 - The talk Phil Mickelson historic win. Where does it rank in terms of upsets? And was the crowd a bit much?",
-                "15:05 - A little preview of what is in store for season 2.",
-                "20:11 - Our top 5 sports moments from the 1990s. We hit on the obvious and not so obvious.",
-                "58:02 - There are always snubs, we quickly go over our snubs. Did your moments make our list or the snubs list?",
-                "1:02:03 - Moving on to our top 5 pop-culture/world-defining events.",
-                "1:38:48 - Again, snubs from the top 5.",
-                "1:44:15 - Closing Arguments.",
-                "1:52:31 - Awards time.",
-                "1:55:22 - The guys wrap up season 1. Thanks for listening and see you in a few months!"
+                "The guys catch up with each other and some happenings.  In honor of the current MLB lockout, the guys look back at the 1994 strike-shortened season and ponder what could have been.  The Expos come up a bunch and a superstar from another league gets heavily involved with baseball.  Crank up your listening device and let's talk about some alternate MLB timelines!"
             ]
         }]
     }

@@ -35,7 +35,7 @@ header {
     left: 0;
     z-index: 11;
     transform: translateX(100%);
-    transition: transform .5s ease-out;
+    transition: transform 0.5s ease-out;
   }
   .nav-list {
     display: flex;
@@ -43,7 +43,7 @@ header {
     list-style: none;
     font-size: 1.2rem;
     @include large-device {
-      font-size: .8rem;
+      font-size: 0.8rem;
     }
     @include medium-device {
       flex-direction: column;
@@ -55,12 +55,12 @@ header {
   }
   .nav-item {
     border-right: 1px solid $primary-text;
-    padding: 0 .75rem;
+    padding: 0 0.75rem;
     &:last-child {
       border-right: none;
     }
     @include large-device {
-      padding: 0 .5rem;
+      padding: 0 0.5rem;
     }
     @include medium-device {
       border-right: none;

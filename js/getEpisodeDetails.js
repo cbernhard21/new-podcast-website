@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 export async function getEpisodeDetails(season) {
     const response = await fetch('./db/db.json');
@@ -15,15 +15,17 @@ export async function getEpisodeDetails(season) {
     if (season === 'Season 2') {
         seasonEpisodes = data.season2.episodes;
         seasonTitle = data.season2.seasonTitle;
-        comingSoon();
+        episodeHtml();
+        // comingSoon()
     }
 
     function episodeHtml() {
         let episodeCardHtml = '';
 
-        let seasonEpisodesHtml = seasonEpisodes.map(episode => {
-            let episodeNumber = episode.number.slice(2);
-            episodeCardHtml = `<article class="episode-card">
+        let seasonEpisodesHtml = seasonEpisodes
+            .map((episode) => {
+                let episodeNumber = episode.number.slice(2);
+                episodeCardHtml = `<article class="episode-card">
             
                           <div class="episode-card-content">
                             <h2 class="episode-card-title"><a href="episode-${episode.number}.html">${episode.title}</a></h2>
@@ -37,16 +39,16 @@ export async function getEpisodeDetails(season) {
                             
                           </div>
   
-                         </article>`
+                         </article>`;
 
-            return episodeCardHtml;
-        }).join('');
+                return episodeCardHtml;
+            })
+            .join('');
 
         const seasonHeading = `<div class="episode-heading-container">
                                   <h2 class="episode-season-heading">${season}</h2>
                                   <h3 class="episode-season-title">${seasonTitle}</h3>
                               </div>`;
-
 
         episodeContainer.innerHTML = seasonHeading + seasonEpisodesHtml;
     }
@@ -56,10 +58,8 @@ export async function getEpisodeDetails(season) {
                                 <h2 class="episode-season-heading">${season}</h2>
                                 <h3 class="episode-season-title">${seasonTitle}</h3>
                               </div>`;
-        const seasonEpisodesHtml = `<p class="big">Coming Soon!</p>`
+        const seasonEpisodesHtml = `<p class="big">Coming Soon!</p>`;
 
         episodeContainer.innerHTML = seasonHeading + seasonEpisodesHtml;
     }
-
-
 }

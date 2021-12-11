@@ -7,29 +7,21 @@ getFooterHtml();
 
 const sitePath = window.location.pathname;
 if (sitePath === '/episodes.html') {
-
-
-
-
     //when the episode page first loads run this season
-    getEpisodeDetails('Season 1');
+    getEpisodeDetails('Season 2');
 
     //get info from the clicked tab and display the correct season's episodes
 
     const seasonTab = document.querySelectorAll('.season-tab');
 
-    seasonTab.forEach(tab => {
-
+    seasonTab.forEach((tab) => {
         tab.addEventListener('click', (e) => {
-            seasonTab.forEach(item => {
+            seasonTab.forEach((item) => {
                 item.classList.remove('active');
-            })
+            });
             let seasonNumber = e.target.innerText;
-            getEpisodeDetails(seasonNumber)
+            getEpisodeDetails(seasonNumber);
             tab.classList.add('active');
-
-        })
-    })
-
-
+        });
+    });
 }

@@ -1,38 +1,43 @@
-'use strict'
+'use strict';
 
 const path = window.location.pathname;
 
 async function getEpisodeDetails(path) {
-  const response = await fetch('db/db.json');
-  const data = await response.json();
-  let seasonOneEpisodes = data.season1.episodes;
+    const response = await fetch('db/db.json');
+    const data = await response.json();
+    const seasonNum = path.slice(9, 10);
+    let seasonEpisodesList = [];
 
-  seasonOneEpisodes.forEach(item => {
-
-    let episodeNumber = item.number.slice(2);
-    let newPath = path.slice(9, 12)
-
-    if (item.number === newPath) {
-      console.log(`this is episode ${episodeNumber} page`)
-
-      let timeStampsList = item.timeStamps.map(timeStamp => {
-        let li = `<li>${timeStamp}</li>`
-        return li;
-      }).join('')
-
-      episodePageHtml(item, episodeNumber, timeStampsList);
-
+    if (seasonNum === '1') {
+        seasonEpisodesList = data.season1.episodes;
+    } else if (seasonNum === '2') {
+        seasonEpisodesList = data.season2.episodes;
     }
 
-  })
+    seasonEpisodesList.forEach((item) => {
+        let episodeNumber = item.number.slice(2);
+        let newPath = path.slice(9, 12);
 
+        if (item.number === newPath) {
+            console.log(`this is episode ${episodeNumber} page`);
+
+            let timeStampsList = item.timeStamps
+                .map((timeStamp) => {
+                    let li = `<li>${timeStamp}</li>`;
+                    return li;
+                })
+                .join('');
+
+            episodePageHtml(item, episodeNumber, timeStampsList);
+        }
+    });
 }
 getEpisodeDetails(path);
 
 function episodePageHtml(item, epNum, list) {
-  let pageHtml = '';
+    let pageHtml = '';
 
-  pageHtml = `
+    pageHtml = `
               <div class="show-title-group">
                 <h1>${item.title}</h1>
                 <h2>Season ${item.season} Ep. ${epNum} </h2>
@@ -49,11 +54,9 @@ function episodePageHtml(item, epNum, list) {
                   <ul>${list}</ul>
                 </article>             
               </div>
-            `
+            `;
 
-  const sectionContainer = document.querySelector('#episode-container');
+    const sectionContainer = document.querySelector('#episode-container');
 
-  sectionContainer.innerHTML = pageHtml;
-
-
+    sectionContainer.innerHTML = pageHtml;
 }

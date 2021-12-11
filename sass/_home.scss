@@ -1,6 +1,6 @@
 #hero-wrapper {
   height: 75vh;
-  background: linear-gradient(107.46deg, #0B0C10 31.15%, rgba(11, 12, 16, 0.1) 98.83%), url(../images/microphone-background.jpg);
+  background: linear-gradient( 107.46deg, #0b0c10 31.15%, rgba(11, 12, 16, 0.1) 98.83%), url(../images/microphone-background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -26,10 +26,10 @@
     .slogan-line-two {
       display: block;
       font-size: clamp(1rem, -0.1901rem + 5.2893vw, 3rem);
-      margin: .5rem 0;
+      margin: 0.5rem 0;
     }
     h3 {
-      font-size: clamp(1rem, 0.2860rem + 3.1736vw, 2.2rem);
+      font-size: clamp(1rem, 0.286rem + 3.1736vw, 2.2rem);
     }
     ul {
       font-size: clamp(1rem, 0.5835rem + 1.8512vw, 1.7rem);
@@ -37,6 +37,14 @@
       margin-bottom: 2rem;
       @include small-device {
         margin-bottom: 1rem;
+      }
+    }
+    .hero-text {
+      font-size: 1.6rem;
+      width: 50ch;
+      margin-bottom: 1.2rem;
+      @include medium-device {
+        font-size: 1.2rem;
       }
     }
     .hero-link-group {
@@ -67,7 +75,7 @@
   }
   h2 {
     font-weight: $regular;
-    font-size: clamp(1.5rem, 0.6880rem + 3.6090vw, 3rem);
+    font-size: clamp(1.5rem, 0.688rem + 3.609vw, 3rem);
     margin-bottom: 1.5rem;
   }
 }
@@ -95,10 +103,10 @@
     }
     svg,
     i {
-      color: rgba(197, 198, 199, .5);
+      color: rgba(197, 198, 199, 0.5);
       max-width: 5rem;
       width: 100%;
-      transition: color .2s ease-in-out;
+      transition: color 0.2s ease-in-out;
       &:hover {
         color: $primary-text;
       }
@@ -127,7 +135,7 @@
     margin-left: 0;
   }
   h2 {
-    font-size: clamp(1.5rem, 0.6880rem + 3.6090vw, 3rem);
+    font-size: clamp(1.5rem, 0.688rem + 3.609vw, 3rem);
     line-height: 1;
     margin-bottom: 2rem;
   }
@@ -166,7 +174,7 @@
     padding: 3rem 0;
   }
   h2 {
-    font-size: clamp(1.5rem, 0.6880rem + 3.6090vw, 3rem);
+    font-size: clamp(1.5rem, 0.688rem + 3.609vw, 3rem);
     margin-bottom: 2rem;
   }
   .row {
