@@ -1,5 +1,5 @@
 #hero-wrapper {
-  height: 75vh;
+  min-height: 75vh;
   background: linear-gradient( 107.46deg, #0b0c10 31.15%, rgba(11, 12, 16, 0.1) 98.83%), url(../images/microphone-background.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -30,12 +30,17 @@
     }
     h3 {
       font-size: clamp(1rem, 0.286rem + 3.1736vw, 2.2rem);
+      margin-bottom: 1rem;
     }
     ul {
       font-size: clamp(1rem, 0.5835rem + 1.8512vw, 1.7rem);
       transform: translateX(2rem);
       margin-bottom: 2rem;
+      width: 95%;
       @include small-device {
+        margin-bottom: 1rem;
+      }
+      li {
         margin-bottom: 1rem;
       }
     }
